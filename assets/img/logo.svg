@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="DayTone">
+  <defs>
+    <clipPath id="sun"><circle cx="50" cy="64" r="30"/></clipPath>
+  </defs>
+  <rect x="0.5" y="0.5" width="99" height="99" rx="22" fill="#fff" stroke="#DADDE3"/>
+  <g clip-path="url(#sun)" fill="#E07B00">
+    <rect x="19" y="30" width="9" height="34" rx="1.5"/>
+    <rect x="32.25" y="30" width="9" height="34" rx="1.5"/>
+    <rect x="45.5" y="30" width="9" height="34" rx="1.5"/>
+    <rect x="58.75" y="30" width="9" height="34" rx="1.5"/>
+    <rect x="72" y="30" width="9" height="34" rx="1.5"/>
+  </g>
+  <rect x="18" y="69" width="64" height="5" rx="2.5" fill="#16181D"/>
+</svg>
