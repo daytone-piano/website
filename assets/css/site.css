@@ -474,6 +474,74 @@ p {
   }
 }
 
+/* Is / isn't ------------------------------------------------------------ */
+
+.section--tight {
+  padding-bottom: 0;
+}
+
+.fit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fit__col {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.fit__col h3 {
+  font-size: 23px;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.fit__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.fit__col li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 18px;
+  color: var(--ink-body);
+}
+
+.fit__col li::before {
+  flex: none;
+  width: 22px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.fit__col--is li::before {
+  content: "✓";
+  color: var(--accent-ink);
+}
+
+.fit__col--isnt li::before {
+  content: "✕";
+  color: var(--ink-2);
+}
+
+.fit__col--isnt li {
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .fit {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Ways to practise ------------------------------------------------------- */
 
 .ways {
