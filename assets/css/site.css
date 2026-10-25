@@ -183,12 +183,50 @@ p {
   gap: 16px;
 }
 
+/* The count of ways to practise, always in view in the bar. */
+.nav__links .nav__count {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent-text);
+  font-weight: 800;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.nav__links .nav__count:hover {
+  color: var(--accent-text);
+  background: color-mix(in srgb, var(--accent) 30%, var(--accent-tint));
+}
+
+.nav__links {
+  align-items: center;
+}
+
 @media (max-width: 560px) {
   .nav__links {
     gap: 16px;
   }
 
   .nav__links .nav__optional {
+    display: none;
+  }
+}
+
+.nav .brand {
+  flex: none;
+}
+
+/* On small phones the bar keeps the count; Privacy and Support stay in
+   the footer of every page. */
+@media (max-width: 400px) {
+  .nav__links .nav__privacy {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  .nav__links .nav__support {
     display: none;
   }
 }
@@ -950,6 +988,37 @@ p {
   margin-top: 10px;
   color: var(--ink-2);
   font-weight: 600;
+}
+
+/* The headline number spans the row above the others. */
+.number--wide {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 24px;
+  background: var(--stage);
+  color: var(--stage-ink);
+}
+
+.number--wide strong {
+  font-size: clamp(64px, 11vw, 112px);
+  color: var(--accent);
+}
+
+.number--wide span {
+  margin-top: 0;
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--stage-ink);
+  max-width: 22em;
+}
+
+.number--wide small {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--stage-ink-2);
 }
 
 @media (max-width: 880px) {

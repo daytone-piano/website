@@ -21,7 +21,7 @@
     const duration = 1100;
     const step = (now) => {
       const t = Math.min(1, (now - start) / duration);
-      element.textContent = String(Math.round(target * (1 - Math.pow(1 - t, 3))));
+      element.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))).toLocaleString('en-US');
       if (t < 1) requestAnimationFrame(step);
     };
     element.textContent = '0';
